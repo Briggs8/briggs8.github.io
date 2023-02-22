@@ -18,7 +18,7 @@ menuToggle.addEventListener('click', ev => {
   darkMode.onclick = function() {
     if (darkModeTracker%2 == 1){
         logo.src = '../images/Logo.png';
-        darkMode.src = '/images/icons/NightMode.png';
+        darkMode.src = '../images/icons/NightMode.png';
         colours.style.setProperty('--header-colour', '#EFF3F6');
         colours.style.setProperty('--text-colour', 'black');
         colours.style.setProperty('--navigation-color', '#F8F9F9');
@@ -28,8 +28,8 @@ menuToggle.addEventListener('click', ev => {
         colours.style.setProperty('--index-banner-image', 'url("/images/Banner/IndexMiniBannerLight.jpg")');
 
     }else{
-        logo.src = '/images/LogoWhite.png';
-        darkMode.src = '/images/icons/LightMode.png';
+        logo.src = '../images/LogoWhite.png';
+        darkMode.src = '../images/icons/LightMode.png';
         colours.style.setProperty('--header-colour', '#15202B');
         colours.style.setProperty('--text-colour', 'white');
         colours.style.setProperty('--navigation-color', '#1D2A35');
