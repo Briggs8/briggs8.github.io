@@ -18,7 +18,7 @@ menuToggle.addEventListener('click', ev => {
   darkMode.onclick = function() {
     if (darkModeTracker%2 == 1){
         logo.src = '../images/Logo.png';
-        darkMode.src = '../images/icons/NightMode.png';
+        darkMode.src = '../images/Icons/NightMode.png';
         colours.style.setProperty('--header-colour', '#EFF3F6');
         colours.style.setProperty('--text-colour', 'black');
         colours.style.setProperty('--navigation-color', '#F8F9F9');
@@ -29,7 +29,7 @@ menuToggle.addEventListener('click', ev => {
 
     }else{
         logo.src = '../images/LogoWhite.png';
-        darkMode.src = '../images/icons/LightMode.png';
+        darkMode.src = '../images/Icons/LightMode.png';
         colours.style.setProperty('--header-colour', '#15202B');
         colours.style.setProperty('--text-colour', 'white');
         colours.style.setProperty('--navigation-color', '#1D2A35');
