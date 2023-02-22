@@ -1,0 +1,293 @@
+/*
+COLOURS
+#2C3639 - Darker Blue
+#3F4E4F - Lighter Blue
+#DCD7C9 - Dark Sandstone
+#f0ebe3 - Lighter Sandstone
+
+6096B
+6096B
+
+
+www.colorhunt.co
+*/
+:root{
+	--header-colour: #e0e0e0;
+	--text-colour: black;
+	--accent-color: #333333;
+	--navigation-color: #F8F9F9;
+	--background-colour: var(--navigation-color);
+	--hover-colour: #e2e2e2;
+	--index-banner-image: url("images/Banner/IndexMiniBannerLight.jpg");
+}
+
+body{
+	font-family: sans-serif;
+	margin: 0;
+	background-color: var(--background-colour);
+}
+
+/* TOP BANNER */
+header{
+	background-color: var(--header-colour);
+	overflow: auto;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+
+}
+
+.HeaderSpacing{
+	display: flex;
+	align-items: center;
+}
+
+#logo{
+	max-width: 100px;
+	padding-left: 1em;
+
+}
+
+#darkMode{
+	max-width: 30px;
+	margin-left: auto;
+	padding: 0.3em;
+	cursor: pointer;
+}
+
+#menuToggle{
+	padding: 0.3em;
+	color:	var(--text-colour);
+	font-size: 3em;
+	text-align: right;
+	margin-right: 0;
+	cursor: pointer;
+}
+
+#headingLine{
+	margin: 0;
+}
+
+/* NAVIGATION */
+nav{
+	/* display: none; */
+	padding: 1em;
+	flex-direction: column;
+	background-color: black;
+	opacity: 80%;
+	/* background-color: var(--navigation-color); */
+	position: fixed;
+	inset: 0;
+	backdrop-filter: blur(5px);
+	transform: translate(100%);
+	transition: 0.7s;
+	margin-top: 88px
+}
+
+
+nav.open {
+	display: flex;
+	/* padding-top: 1em; */
+	transform: none;
+}
+
+nav a{
+	text-decoration: none;
+	color: white;
+	padding: 0.5em;
+    transition: all 0.3s; 
+	font-size:medium;
+	border-radius: 0.5em;
+}
+
+.seperator{
+	color: lightgray;
+}
+
+nav a:hover{
+	background-color: var(--accent-color);
+}
+
+/* MAIN BODY */
+#indexTitle{
+	margin-top: 88px;
+	background-image: var(--index-banner-image);
+	background-size: cover;
+	background-position: -3em;
+	padding-top: 50px;
+	padding-bottom: 250px;
+}
+
+#indexTitle > h1{
+	background-color: rgba(21, 32, 43, 0.7);
+	padding: 0.5em 0;
+	width: 150px;
+	padding-left: 1em;
+	color: white;
+}
+
+#mainBody{
+	padding: 0 1em;
+	text-align: center;
+	background-color: var(--background-colour);
+	color: var(--text-colour);
+	overflow: auto;
+	max-width: 1400px !important;
+	margin: auto
+}
+
+#throughTheDecades{
+	padding: 0 1em;
+	text-align: center;
+	background-color: var(--background-colour);
+	color: var(--text-colour);
+	overflow: auto;
+}
+
+#decadeNav{
+	background-color: var(--header-colour);
+	display: flex;
+	flex-direction: row;
+	width: auto;
+	margin: auto;
+	border-radius: 10px;
+	position:static;
+}
+
+#decadeNav a{
+	color: var(--text-colour);
+	text-decoration: none;
+	font-size: medium;
+	width: 100%;
+	padding: 1em 0.3em;
+	text-align: center;
+}
+
+#decadeNav a:hover{
+	background-color: var(--hover-colour);
+	border-radius: 10px;
+	
+}
+
+.decade > img{
+	width: 100%;
+	border-radius: 10px;
+}
+
+.throughTheDecadesText{
+	background-color: var(--header-colour);
+	font-size: small;
+	padding: 0.25em 1em;
+	border-radius: 10px;
+	margin: 1em 0;
+}
+
+#AboutUS{
+	background-color: var(--header-colour);
+	font-size: small;
+	padding: 0.25em 1em;
+	border-radius: 10px;
+	margin: 1em 0;
+}
+
+footer{
+	background-color: var(--header-colour);
+	color: var(--text-colour);
+	overflow: auto;
+	padding: 0.5em;
+}
+
+@media screen and (min-width: 493px){
+	#indexTitle{
+		background-position: 0;
+	}
+	
+}
+
+@media  screen and (min-width: 1000px) {
+	
+	.decade{
+		/* height: 100vh; */
+		display: grid;
+		grid-template-columns: 50% 50%;
+		align-items: center;
+	}
+
+	.disposable{
+		display: none;
+	}
+
+	.throughTheDecadesText{
+		padding: 0;
+		margin: 1em;
+		overflow: auto;
+		padding-bottom: 66.6666%;
+		position: relative;
+	}
+
+	.throughTheDecadesText > div {
+		position: absolute;
+		overflow: auto;
+		padding: 0 1em;
+	}
+	
+
+	#menuToggle{
+		display: none;
+	}
+	
+	#mobileMenu{
+		display: none;
+	}
+
+	#logo{
+		padding-left: 1em;
+	}
+
+	nav{
+		background-color: var(--header-colour);
+		display: flex;
+		flex-direction: row;
+		width: 50%;
+		margin: auto;
+		position: inherit;
+		inset: none;
+		/* backdrop-filter: blur(5px); */
+		transform: none;
+		transition: 0.7s;
+	}
+
+	nav a{
+		font-size: medium;
+		width: 100%;
+		padding: 1em 0.3em;
+		text-align: center;
+		color: var(--text-colour);
+	}
+
+	nav a:hover{
+		background-color: var(--hover-colour);
+	}
+
+
+	#darkMode{
+		max-width: 30px;
+		padding: 0.3em;
+		margin-right: 1em;
+		margin-left: 80px;
+	}
+
+	#mainBody{
+		padding: 0 3em;
+	}
+
+	#aboutUsGrid{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		align-items: center;
+	}
+	
+
+	
+	
+}
