@@ -190,6 +190,11 @@ nav a:hover{
 	margin: 1em 0;
 }
 
+input:invalid {
+	background-color: hsl(0, 70%, 70%);
+	border-color: hsl(0, 100%, 70%)
+}
+
 footer{
 	background-color: var(--header-colour);
 	color: var(--text-colour);
@@ -231,7 +236,7 @@ footer{
 		padding: 0 1em;
 	}
 	
-
+	
 	#menuToggle{
 		display: none;
 	}
@@ -286,6 +291,7 @@ footer{
 		grid-template-columns: 50% 50%;
 		align-items: center;
 	}
+
 	
 
 	
