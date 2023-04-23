@@ -18,7 +18,7 @@ www.colorhunt.co
 	--navigation-color: #F8F9F9;
 	--background-colour: var(--navigation-color);
 	--hover-colour: #e2e2e2;
-	--index-banner-image: url("images/Banner/IndexMiniBannerLight.jpg");
+	--index-banner-image: url("images/banner/indexMiniBannerLight.jpg");
 }
 
 body{
@@ -29,15 +29,14 @@ body{
 
 /* TOP BANNER */
 header{
-	background-color: var(--header-colour);
+	background-color: var(--background-colour);
 	overflow: auto;
 	position: fixed;
 	width: 100%;
 	z-index: 100;
-
 }
 
-.HeaderSpacing{
+.headerSpacing{
 	display: flex;
 	align-items: center;
 }
@@ -47,6 +46,9 @@ header{
 	padding-left: 1em;
 
 }
+/* html {
+	scroll-behavior: smooth;
+} */
 
 #darkMode{
 	max-width: 30px;
@@ -66,6 +68,7 @@ header{
 
 #headingLine{
 	margin: 0;
+	border-bottom: 4px solid var(--text-colour);
 }
 
 /* NAVIGATION */
@@ -126,14 +129,89 @@ nav a:hover{
 	color: white;
 }
 
+
+
 #mainBody{
 	padding: 0 1em;
 	text-align: center;
 	background-color: var(--background-colour);
 	color: var(--text-colour);
 	overflow: auto;
-	max-width: 1400px !important;
+	max-width: 1920px !important;
 	margin: auto
+}
+
+#welcome{
+	margin: 2em;
+}
+
+#spotlight{
+	display: block;
+	padding: 2em 0;
+}
+
+#spotlight > div > p{
+	padding-top: 1em;
+	margin: 0 10%;
+	
+}
+
+#spotlight > div > img{
+	max-width: 80%;
+	max-height: 80%;
+}
+#club{
+	padding: 2em 0;
+	max-width: 1200px;
+	margin: auto;
+}
+
+#communities{
+	display: flex;
+	flex-direction: column;
+	margin: 0 1em 1em 1em;
+}
+
+#communities div{
+	background-color: var(--header-colour);
+	height: auto;
+	margin: 1em 0;
+	border-radius: 10px;	
+	display: flex;	
+	flex-direction: column;
+	padding: 1em;
+}
+
+#communities > div > img{
+	width: 5em;
+	height: 5em;
+	border-radius: 0.5em;
+	margin: auto;
+}
+
+#communities > div > h3{
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 1.1;
+	margin: 0.4em 0 0.4em 0;
+}
+
+#communities div p {
+	margin: 0.3em;
+	text-align: center;
+}
+
+#communities div button{
+	padding: 10px;
+	margin: 1em 0 0 0;
+
+	background-color: #fa6400;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 #throughTheDecades{
@@ -157,7 +235,7 @@ nav a:hover{
 #decadeNav a{
 	color: var(--text-colour);
 	text-decoration: none;
-	font-size: medium;
+	font-size: small;
 	width: 100%;
 	padding: 1em 0.3em;
 	text-align: center;
@@ -190,9 +268,58 @@ nav a:hover{
 	margin: 1em 0;
 }
 
+#gallery{
+	display: flex;
+	max-height: 50vh;
+	overflow-x: scroll;
+}
+
+#gallery > img{
+	/* max-height: 10em; */
+	display: block;
+	max-width: 20em;
+	max-height: 50vh;
+	height: auto;
+	width: auto;
+	padding: 0 2em;
+}
+
 input:invalid {
 	background-color: hsl(0, 70%, 70%);
 	border-color: hsl(0, 100%, 70%)
+}
+
+iframe{
+	width: 100%;
+	padding-bottom: 2em;
+	border-radius: 10px;
+}
+
+
+#modernGallery{
+	display: flex;
+	max-height: 50vh;
+	overflow-x: scroll;
+}
+
+#modernGallery > img{
+	/* max-height: 10em; */
+	display: block;
+	max-width: 10em;
+	max-height: 50vh;
+	height: auto;
+	width: auto;
+	padding: 0 0.5em;
+}
+
+#modernMainBody{
+	display: block;
+	margin-top: 2em;
+}
+
+#modernMainBody > img{
+	max-width: 80%;
+	max-height: 80%;
 }
 
 footer{
@@ -206,7 +333,41 @@ footer{
 	#indexTitle{
 		background-position: 0;
 	}
+
+	#decadeNav a{
+		font-size: medium;
+	}
 	
+}
+
+@media screen and (min-width: 700px){
+	#communities{
+		display: grid;
+		grid-template-columns: 33% 33% 33%;
+	}
+
+	#communities .column{
+		flex: 1;
+	}
+	
+	#communities div{
+		margin: 0 0.5em;
+		display: flex;	
+		flex-direction: column;	
+	}
+	
+	#communities > div > img{
+		margin: 0 auto 0 auto;
+
+	}
+	
+	#communities div p {
+		margin: auto auto 2em auto;
+	}
+	
+	#communities div button{
+		margin-top: auto;
+	}
 }
 
 @media  screen and (min-width: 1000px) {
@@ -256,7 +417,7 @@ footer{
 		width: 50%;
 		margin: auto;
 		position: inherit;
-		inset: none;
+		/* inset: none; */
 		/* backdrop-filter: blur(5px); */
 		transform: none;
 		transition: 0.7s;
@@ -292,8 +453,42 @@ footer{
 		align-items: center;
 	}
 
-	
+	#imageSection{
+		display: grid;
+		grid-template-columns: 20% 80%;
+	}
 
+	#modernGallery{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		flex-direction: column;
+		max-height: fit-content;
+		overflow: hidden;
+	}
+	
+	#modernGallery > img{
+		/* max-height: 10em; */
+		display: block;
+		max-width: 90%;
+		height: auto;
+		width: auto;
+		padding: 0.5em 0.5em;
+	}
+	
+	#modernMainBody{
+		display: block;
+		margin-top: 2em;
+		align-items: center;
+	}
+	
+	#modernMainBody > img{
+		width: 80%;
+		max-height: 80%;
+	}
+
+	#modernMainBody > div{
+		margin: 0 10%;
+	}
 	
 	
 }

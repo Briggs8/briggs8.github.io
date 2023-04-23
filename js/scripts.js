@@ -1,15 +1,10 @@
-// console.log("Obviously, you should replace this with some event handlers.")
-
-// myButton.addEventListener("click", output);
-
-// function output(){
-//     myButton.textContent = "Hello"
-// }
-
+//Mobile Menu
 menuToggle.addEventListener('click', ev => {
-    mobileMenu.classList.toggle('open');
+    navToggle.classList.toggle('open');
   });
 
+
+//Dark Mode
   var logo = document.querySelector('#logo')
   var darkMode = document.querySelector('#darkMode')
   var colours = document.querySelector(':root')
@@ -17,26 +12,26 @@ menuToggle.addEventListener('click', ev => {
 
   darkMode.onclick = function() {
     if (darkModeTracker%2 == 1){
-        logo.src = '../images/Logo.png';
-        darkMode.src = '/images/icons/NightMode.png';
-        colours.style.setProperty('--header-colour', '#EFF3F6');
+        logo.src = 'images/logo.png';
+        darkMode.src = 'images/icons/nightMode.png';
+        colours.style.setProperty('--header-colour', '#e0e0e0');
         colours.style.setProperty('--text-colour', 'black');
-        colours.style.setProperty('--navigation-color', '#F8F9F9');
-        colours.style.setProperty('--background-color', '#F8F9F9');
-        colours.style.setProperty('--hover-colour', '#e2e2e2');
+        colours.style.setProperty('--navigation-color', '#f6fafd');
+        colours.style.setProperty('--background-color', '#f6fafd');
+        colours.style.setProperty('--hover-colour', '#e9e9e9');
         colours.style.setProperty('--accent-color', '#333333');
-        colours.style.setProperty('--index-banner-image', 'url("/images/Banner/IndexMiniBannerLight.jpg")');
+        colours.style.setProperty('--index-banner-image', 'url("images/banner/indexMiniBannerLight.jpg")');
 
     }else{
-        logo.src = '/images/LogoWhite.png';
-        darkMode.src = '/images/icons/LightMode.png';
+        logo.src = 'images/logoWhite.png';
+        darkMode.src = 'images/icons/lightMode.png';
         colours.style.setProperty('--header-colour', '#15202B');
         colours.style.setProperty('--text-colour', 'white');
         colours.style.setProperty('--navigation-color', '#1D2A35');
         colours.style.setProperty('--background-color', '#1D2A35');
         colours.style.setProperty('--hover-colour', '#1D2A35');
         colours.style.setProperty('--accent-color', '#15202B');
-        colours.style.setProperty('--index-banner-image', 'url("/images/Banner/IndexMiniBanner.jpg")');
+        colours.style.setProperty('--index-banner-image', 'url("images/banner/indexMiniBanner.jpg")');
     }
     darkModeTracker++
 };
