@@ -1,0 +1,157 @@
+body{
+    background-color: #06283d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+
+#main{
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px 17px 50px;
+    transition: all 1s ease-in-out;
+}
+
+
+#image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    max-width: 150px;
+    padding: 40px 0;    
+}
+
+nav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+nav a{
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #06283d;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 501 and 301 */
+#players{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    width: 90%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#home{
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px 30px;
+    border-radius: 20px;
+
+    text-decoration: none;
+    color: black;
+}
+
+#mainGame{
+    margin-top: 60px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#playerScoreEnter{
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 20px;
+}
+
+#numberPad{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+#bust{
+    background-color: #f44;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+#submit{
+    background-color: #4f4;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+#num{
+    background-color: #eee;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+
+@media  screen and (min-width: 400px){
+    
+    #main{
+        padding: 20px 30px 50px;
+    }
+
+}
+
+@media  screen and (min-width: 500px){
+    #main{
+        padding: 20px 70px 50px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    
+    #main{
+        display: grid;
+		grid-template-columns: 50% 50%;
+        padding: 50px 10px 50px;
+        width: 95%;
+    }
+
+    #heading{
+        margin: 50px;
+    }
+
+    nav{
+        justify-content: center;
+    }
+
+}
