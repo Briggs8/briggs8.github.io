@@ -80,7 +80,7 @@ nav a:hover {
 }
 
 #mainGame{
-    margin-top: 60px;
+    margin-top: 0px;
     padding: 10px;
     background-color: #fff;
     border-radius: 20px;
@@ -89,8 +89,13 @@ nav a:hover {
 
 #playerScoreEnter{
     padding: 10px;
-    background-color: #eee;
+    background-color: #333;
     border-radius: 20px;
+    color: #fff;
+}
+
+#checkout{
+    margin-bottom: 50px;
 }
 
 #numberPad{
@@ -101,25 +106,46 @@ nav a:hover {
 #bust{
     background-color: #f44;
     text-align: center;
-    padding: 10px 10px;
     margin: 5px;
-    border-radius: 20px;
+
+    display: inline-block;
+	padding: 10px 20px;
+	color: #333;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 #submit{
     background-color: #4f4;
     text-align: center;
-    padding: 10px 10px;
     margin: 5px;
-    border-radius: 20px;
+
+    display: inline-block;
+	padding: 10px 20px;
+	color: #333;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 #num{
-    background-color: #eee;
+	background-color: #333;
     text-align: center;
-    padding: 10px 10px;
     margin: 5px;
-    border-radius: 20px;
+
+    display: inline-block;
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 
